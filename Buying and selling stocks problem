@@ -1,0 +1,22 @@
+import java.util.*;
+class arr{
+    public static int stocks(int prices[]) {
+        int buying_price=Integer.MAX_VALUE;
+        int maxprofit=0;
+        for(int i=0;i<prices.length;i++){
+            if(buying_price<prices[i]){
+              int profit=prices[i]-buying_price;
+              maxprofit=Math.max(maxprofit,profit);
+            }
+            else{
+                buying_price=prices[i];
+            }
+        }
+            return maxprofit;
+        }
+    
+    public static void main(String[] args) {
+        int prices[]={7,1,5,3,6,4};
+        System.out.println(stocks(prices));
+    }
+}
