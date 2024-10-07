@@ -1,0 +1,46 @@
+import java.util.*;
+class program{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enetr number of rows");
+        int n=sc.nextInt();
+        System.out.println("Enter number of col");
+        int m=sc.nextInt();
+        int arr[][]=new int[n][m];
+    
+        for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            arr[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println("spiral order");
+        int rowstart=0;
+        int rowend=n-1;
+        int colstart=0;
+        int colend=m-1;
+
+        while(rowstart<=rowend && colstart<=colend){
+
+            for(int col=colstart;col<=colend;col++){
+                System.out.print(arr[rowstart][col]+" ");
+            }
+            rowstart++;
+        
+            for(int row=rowstart;row<=rowend;row++){
+                System.out.print(arr[row][colend]+" ");
+            }
+            colend--;
+        
+            for(int col=colend;col>=colstart;col--){
+                System.out.print(arr[rowend][col]+" ");
+            }
+            rowend--;
+            
+            for(int row=rowend;row>=rowstart;row--){
+                System.out.print(arr[row][colstart]+" ");
+            }
+            colstart++;
+            System.out.println();
+}
+}
+}
