@@ -1,0 +1,22 @@
+import java.util.*;
+class string{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.next();
+        int numvowel=0;
+        int numconsonant=0;
+        str=str.toLowerCase();
+        
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);  
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+              numvowel++;
+            }
+            else if(ch>='a'&&ch<='z'){
+             numconsonant++;
+            }
+    }
+        System.out.println("The number of vowels are:"+numvowel);
+        System.out.println("The number of consonants are:"+numconsonant);
+  }  
+}
