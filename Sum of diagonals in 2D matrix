@@ -1,0 +1,35 @@
+import java.util.*;
+class program{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the m*n matrix");
+        int n=sc.nextInt();
+      
+        int [][]arr=new int[n][n];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+            System.out.print(arr[i][j]+" ");
+        }
+        System.out.println();
+    }
+        System.out.println("Finding the sum of left and right diagonals");
+        int sumR=0,sumL=0;
+            for(int i=0;i<n;i++){
+                for(int j=0;j<n;j++){
+                if(i==j){
+                sumL+=arr[i][j];
+                }
+                 if(i+j==n-1){
+                    sumR+=arr[i][j];
+                }
+            }
+        }
+                System.out.println("The sum of the left diagonal is:"+sumL);
+                System.out.println("The sum of the right diagonal is:"+sumR);
+            }
+    }
