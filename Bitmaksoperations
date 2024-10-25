@@ -1,0 +1,60 @@
+//GET BIT
+import java.util.*;
+class program{
+public static void main(String[] args) {
+    int num=5;
+    int pos=3;
+    int bitmask=1<<pos;
+    if((bitmask & num)==0){
+        System.out.println("bit is off");
+    }
+    else{
+        System.out.println("bit is on");
+    }
+}
+}
+// SET BIT
+import java.util.*;
+class program{
+public static void main(String[] args) {
+    int num=5;
+    int pos=1;
+    int bitmask=1<<pos;
+   int newnum=bitmask | num;
+   System.out.println(newnum);
+}
+}
+//CLEAR BIT
+import java.util.*;
+class progrma{
+    public static void main(String[] args) {
+        int num=5;
+        int pos=2;
+        int bitmask=1<<pos;
+        int notbit=(~bitmask);
+        int newnum= notbit&num;
+        System.out.println(newnum);
+    }
+}
+// Update Bit    */
+import java.util.*;
+class program{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int opr=sc.nextInt();
+        //opr=1 :set oper=0 :clear
+        int num=5;
+        int pos= 1;
+        int bitmask=1<<pos;
+        //set oper
+        if(opr==1){
+            int newnum=bitmask | num;
+            System.out.println(newnum);
+        }
+        else{
+          int newBitmask=~(bitmask) ;
+          int newnum=newBitmask &num;
+          System.out.println(newnum);
+        }
+    }
+}
