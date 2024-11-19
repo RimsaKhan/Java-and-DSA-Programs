@@ -1,0 +1,15 @@
+class program{
+    public static void tower_of_honoi(int n,String src,String Helper,String des) {
+        if(n==1){
+            System.out.println("transfer disk "+n+" from "+src+" to "+des);
+            return;
+        }
+        tower_of_honoi(n-1, src, des, Helper);
+        System.out.println("transfer disk "+n+" from "+src+" to "+des);
+        tower_of_honoi(n-1, Helper,src, des);
+    }
+    public static void main(String[] args) {
+        int n=3;
+        tower_of_honoi(n,"S","H","D");
+    }
+}
