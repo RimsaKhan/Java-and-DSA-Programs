@@ -1,0 +1,12 @@
+class program{
+public static void print_num(int num, int N){
+if(num>N){
+  return;
+}
+  System.out.println(num);
+  print_num(num+1,N);
+}
+public static void main(String[] args){
+print_num(1,5);
+}
+}
