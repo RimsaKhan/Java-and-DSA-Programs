@@ -1,0 +1,26 @@
+class program{
+    public static void sorted_array(String letters, int idx,int count,String newstring) {
+
+        if(idx==letters.length()){
+           for(int i=0;i<count;i++){
+            newstring+='x';
+           }
+            System.out.println(newstring);
+            return;
+        }
+        char currChar=letters.charAt(idx);
+        if(currChar=='x'){
+            count++;
+            sorted_array(letters,idx+1,count,newstring);
+        }
+        else{
+         newstring+=currChar;
+          sorted_array(letters,idx+1,count,newstring);
+        }
+    }
+    public static void main(String[] args) {
+     String letters="axbcxxd";  
+     sorted_array(letters, 0, 0, "");
+    }
+}
+ 
