@@ -1,0 +1,26 @@
+public static void hollow_triangle(int n){
+    for (int i=1;i<=n;i++){
+     //spaces
+    for(int j=1;j<=n-i;j++){
+        System.out.print(" ");
+    }
+     //star
+    for(int j=1;j<=2*i-1;j++){
+        if(i==1||i==n||j==1||j==2*i-1){
+            System.out.print("*");
+        }
+        else{
+             System.out.print(" ");
+        }
+    }
+    System.out.println("");
+}      
+}
+public static void main(String[]args){
+// solidtriangle(4,5 );
+// inverted_half_pyramid_withnumber(5);
+// butterfly(5);
+// hollowrombus(5);
+  hollow_triangle(4);
+}
+}
